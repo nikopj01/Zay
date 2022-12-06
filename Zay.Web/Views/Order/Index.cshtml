@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Zay.ApplicationCore.Entities.Order>
+
+@{
+    ViewData["Title"] = "Orders";
+}
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderAt)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderAt)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

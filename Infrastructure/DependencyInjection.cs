@@ -10,9 +10,10 @@ namespace Zay.Infrastructure
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICartService, CartService>();
+            services.AddScoped<IOrderService, OrderService>();
             services.AddSingleton<IMongoDbFactory>(new MongoDbFactory(configuration.GetSection("MongoDB:ConnectionString").Value));
             return services;
         }
-
     }
 }

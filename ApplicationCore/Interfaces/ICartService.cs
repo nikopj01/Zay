@@ -7,9 +7,8 @@ using Zay.ApplicationCore.Entities;
 
 namespace Zay.ApplicationCore.Interfaces
 {
-    public interface IProductService
+    public interface ICartService
     {
-        IEnumerable<Product> GetProducts(string keyWord);
-        Product GetProductDetails(string id);
+        Cart GetProductsInCart(string email);
     }
 }

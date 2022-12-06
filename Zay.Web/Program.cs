@@ -1,9 +1,16 @@
 using Zay.ApplicationCore;
 using Zay.Infrastructure;
+using Zay.Infrastructure.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddApplicationCore();
+builder.Services.AddIdentity<ApplicationUser, ApplicationRole>()
+                    .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>
+                    (
+                        builder.Configuration.GetSection("MongoDB:ConnectionString").Value,
+                        builder.Configuration.GetSection("MongoDB:Database").Value
+                    );
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -22,7 +29,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -7,9 +7,9 @@ using Zay.ApplicationCore.Entities;
 
 namespace Zay.ApplicationCore.Interfaces
 {
-    public interface IProductService
+    public interface IOrderService
     {
-        IEnumerable<Product> GetProducts(string keyWord);
-        Product GetProductDetails(string id);
+        IEnumerable<Order> GetOrders(string email);
+        void SaveOrder(Order order);
     }
 }

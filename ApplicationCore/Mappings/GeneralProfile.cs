@@ -8,7 +8,9 @@ namespace Zay.ApplicationCore.Mappings
     {
         public GeneralProfile()
         {
-            CreateMap<CreateProduct, Product>();
+            CreateMap<Cart, Order>()
+            .ForMember(d => d.Email, source => source.MapFrom(s => s.Email))
+            .ForMember(d => d.OrderItems, source => source.MapFrom(s => s.CartItems));
         }
     }
 }
