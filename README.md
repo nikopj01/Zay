@@ -1,4 +1,8 @@
 # Zay
+Purpose:
+*CRUD
+*Login & Register with .Net Identity
+
 Tech:
 * .Net Core Web App
 * MongoDB
