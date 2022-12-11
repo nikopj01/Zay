@@ -1,8 +1,6 @@
 # Zay
 
-Purpose:
-*CRUD
-*Login & Register with .Net Identity
+Purpose: CRUD and Login & Register with .Net Identity
 
 Tech:
 * .Net Core Web App
