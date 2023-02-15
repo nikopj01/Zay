@@ -9,4 +9,4 @@ Tech:
 * Digital Ocean: Kubernetes
 * Digital Ocean Container Registry : registry.digitalocean.com/aweixz
 * Cloudfare
-* Url: https://www.nikopj.online/
+* Url: https://www.nikopj.online/ (Offline)
